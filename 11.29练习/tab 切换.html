@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body,div,span{margin:0;padding:0;}
+			.tab-con{width:600px;height:400px;margin:0 auto;}
+			.tab-con span{background:red;width:200px;height:100px;float:left;
+			text-align:center;line-height:80px;cursor:pointer;}
+			.tab-con div{background:yellow;width:600px;height:100px;float:left;font-size:100px;
+			text-align:center;display:none;}
+			.tab-con .aa{display:block;}
+			.tab-con .bb{background:green;}
+
+		</style>
+	</head>
+	<body>
+		<div id="tab-con" class="tab-con">
+			<span class="bb">1</span>
+			<span>2</span>
+			<span>3</span>
+			<div class="aa">1</div>
+			<div>2</div>
+			<div>3</div>
+		</div>
+
+		<div id="tab-con1" class="tab-con">
+			<span class="bb">1</span>
+			<span>2</span>
+			<span>3</span>
+			<div class="aa">1</div>
+			<div>2</div>
+			<div>3</div>
+		</div>
+		<script>
+			var naBtns=document.getElementById("tab-con").getElementsByTagName("span");
+			var conDivs=document.getElementById("tab-con").getElementsByTagName("div");
+
+			for (var i=0;i<naBtns.length;i++)
+			{
+				naBtns[i].onclick=clickHandle;
+			}
+			function clickHandle()
+			{
+				for (var i=0;i<naBtns.length;i++)
+				{
+					if (this==naBtns[i])
+					{
+						conDivs[i].className="aa";
+						naBtns[i].className="bb";
+					}
+					else
+					{
+						conDivs[i].className="";
+						naBtns[i].className="";
+
+					}
+				}
+			}
+
+			var naBtns1=document.getElementById("tab-con1").getElementsByTagName("span");
+			var conDivs1=document.getElementById("tab-con1").getElementsByTagName("div");
+			for (var i=0;i<naBtns.length;i++)
+			{
+				naBtns1[i].onclick=clickHandlea;
+			}
+			function clickHandlea()
+			{
+				for (var i=0;i<naBtns1.length;i++)
+				{
+					if (this==naBtns1[i])
+					{
+						conDivs1[i].className="aa";
+						naBtns1[i].className="bb";
+					}
+					else
+					{
+						conDivs1[i].className="";
+						naBtns1[i].className="";
+
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

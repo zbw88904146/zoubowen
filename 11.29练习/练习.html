@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				width:100px;
+				height:100px;
+			}
+			.b{
+				border:1px red solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="one" class="a b c"></div>
+		<script>
+			var one=document.getElementById("one");
+			var a=one.className;
+			var b=a.split("");//字符串变数组
+			alert(b);
+		</script>
+	</body>
+</html>
